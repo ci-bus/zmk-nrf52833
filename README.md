@@ -78,6 +78,10 @@ Adicional desde este repo puedes descargar el **bootloader** correcto con nosd p
 
 El bootloader proviene del repo de adafruit, para flashear el micro debes pulsar dos veces reset muy rápido eso hará que aparezca como un pendrive, entonces copias el archivo .uf2 generado por ZMK.
 
-[Descargar bootloader](https://github.com/ci-bus/zmk-nrf52833/blob/master/pca10100_bootloader-0.5.1.1_nosd.hex)
+##Otros links
+
+[ZMK Firmware](https://zmk.dev/)
 
 [Adafruit nr52 bootloader releases](https://github.com/adafruit/Adafruit_nRF52_Bootloader/releases)
+
+[Open source VIA Español todos los teclados QMK soportados](https://github.com/ci-bus/Miguelio-VIA-Keyboards)
