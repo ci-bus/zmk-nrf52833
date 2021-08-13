@@ -78,7 +78,7 @@ Adicional desde este repo puedes descargar el **bootloader** correcto con nosd p
 
 El bootloader proviene del repo de adafruit, para flashear el micro debes pulsar dos veces reset muy rápido eso hará que aparezca como un pendrive, entonces copias el archivo .uf2 generado por ZMK.
 
-##Otros links
+## Otros links
 
 [ZMK Firmware](https://zmk.dev/)
 
