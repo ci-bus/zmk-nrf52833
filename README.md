@@ -20,9 +20,18 @@ Veamos primero algunas diferencias entre E73 2G4M08SIE (nrf52833) y E73 2G4M08S1
 | Storage partición | 32kB | 32kB |
 | Boot partición | 48kB | 48kB |
 
+## Cargando el bootloader
+
+1. Flashea el archivo pca10100_bootloader-0.6.2_s140_6.1.1.hex de este repositorio
+2. Conectado por USB debe aparecer como una memoria o pendrive, copia el archivo update-pca10100_bootloader-0.6.2_nosd.uf2
+
+NOTA: Si no sabes como cargar el bootloader puedes mirar esta guía [Bootloader nrfmicro guía](https://github.com/joric/nrfmicro/wiki/Bootloader)
+
 Dado que con nrf52833 solo tenemos 428kB disponibles no será posible tener una pantalla, o de tener una debe ser con un código muy limitado, el código básico de zmk para un teclado 60% con dos capas funcionando por usb y bluetooth necesita 312kB, si a eso sumamos la funcionalidad de rgb underglow sube a 328kB
 
-Dicho esto veamos que configuraciones hay que hacer, estos ejemplos son en base a una board arm como nice_nano o nrfmicro
+## Configurando ZMK
+
+Veamos que configuraciones hay que hacer, estos ejemplos son en base a una board arm como nice_nano o nrfmicro
 
 1. Cambiar la configuración SOC en el archivo **_config.c**
 
@@ -71,10 +80,6 @@ CONFIG_SOC_NRF52833_QIAA=y
 ~~~
  
 Con estos cambios ya podremos disfrutar de ZMK en nuestro chip nrf52833
-
-Adicional desde este repo puedes descargar el **bootloader** correcto con nosd para este chip
-
-##nrf52833 también es llamado como pca10100 y el bootloader debe ser nosd
 
 El bootloader proviene del repo de adafruit, para flashear el micro debes pulsar dos veces reset muy rápido eso hará que aparezca como un pendrive, entonces copias el archivo .uf2 generado por ZMK.
 
